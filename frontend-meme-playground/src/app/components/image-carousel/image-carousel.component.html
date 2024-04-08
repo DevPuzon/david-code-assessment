@@ -1,0 +1,15 @@
+<div class="carousel">
+  <div class="carousel-control prev" (click)="prevSlide()"> 
+    <button class="action-btn">&#10094;</button>
+  </div>
+  <div class="carousel-control next" (click)="nextSlide()"> 
+    <button class="action-btn">&#10095;</button>
+  </div>
+  <div class="carousel-slides">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <div class="carousel-slide" [class.active]="i === currentSlide">
+        <img [src]="slide.url" alt="Meme {{ slide.name }}" loading="lazy">
+      </div>
+    </ng-container>
+  </div>
+</div>

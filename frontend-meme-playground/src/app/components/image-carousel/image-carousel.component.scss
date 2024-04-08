@@ -1,0 +1,54 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; 
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      place-content: center;
+      padding: 10px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 2;
+        .action-btn{ 
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        &.prev {
+            left: 0;
+        }
+    
+        &.next {
+            right: 0;
+        }
+    }
+  
+    .carousel-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  
+      .carousel-slide {
+        display: none;
+        position: absolute;
+        width: 100%;
+  
+        img { 
+          object-fit: contain;
+          height: 100vh;
+          width: 100%;
+        }
+  
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  
